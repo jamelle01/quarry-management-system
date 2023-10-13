@@ -29,9 +29,9 @@ require_once 'menu.php';
                     <th colspan="3" ><p class="text-center pt-3">ACTIVE PERMITTEES</p></th>
                 </tr>
                 <tr>
-                    <th scope="col">Permittee Name</th>
-                    <th scope="col">Expiry Date</th>
-                    <th scope="col" class="text-center">Action</th>
+                    <th style="width: 50%" scope="col">Permittee Name</th>
+                    <th style="width: 20%" scope="col">Expiry Date</th>
+                    <th style="width: 30%" scope="col" class="text-center">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,10 +78,10 @@ require_once 'menu.php';
                 <th colspan="3" ><p class="text-center pt-3">INACTIVE PERMITTEES</p></th>
             </tr>
             <tr>
-                <th scope="col">Permittee Name</th>
-                <th scope="col">Expiry Date</th>
-                <th scope="col" class="text-center">Action</th>
-            </tr>
+                    <th style="width: 50%" scope="col">Permittee Name</th>
+                    <th style="width: 20%" scope="col">Expiry Date</th>
+                    <th style="width: 30%" scope="col" class="text-center">Action</th>
+                </tr>
         </thead>
         <tbody>
             <?php foreach ($InactivePermittees as $permittee): ?>

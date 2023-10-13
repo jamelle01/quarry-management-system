@@ -3,12 +3,10 @@ require_once 'header.php';
 require_once 'menu.php';
 ?>
 
-
-
 <div class="tablediv mx-5 my-5">
 
     <table class="table">
-    <a href="index.php?action=quarry_permittee" class="btn btn-close mb-2 mt-5" aria-label="Close"></a>
+    <a href="index.php?action=commercial_permittee" class="btn btn-close mb-3 mt-5" aria-label="Close"></a>
 
         <thead class="table-dark my-5 fixed ">
             <tr>

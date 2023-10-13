@@ -20,19 +20,20 @@
 
           <li>
               <a class="nav-link scrollto
-              <?php if (
-    isset($_GET['action']) &&
-    ($_GET['action'] == 'quarry_permittee' ||
-        $_GET['action'] == 'edit_quarry' ||
-        $_GET['action'] == 'set_active_quarry' ||
-        $_GET['action'] == 'import_quarry' ||
-        $_GET['action'] == 'set_inactive_quarry')
-): ?>
-              active
-              <?php endif;?>
-              " href="index.php?action=quarry_permittee">QUARRY PERMITTEE</a>
+              <?php if (isset($_GET['action']) && ($_GET['action'] == 'quarry_permittee' ||
+    $_GET['action'] == 'edit_quarry' ||
+    $_GET['action'] == 'set_active_quarry' ||
+    $_GET['action'] == 'import_quarry' ||
+    $_GET['action'] == 'view_quarry' ||
+    $_GET['action'] == 'set_inactive_quarry')
+): ?> active <?php endif;?>" href="index.php?action=quarry_permittee">QUARRY PERMITTEE</a>
           </li>
-          <li><a class="nav-link scrollto" href="index.php?action=quarry_permittee">COMMERCIAL SAND AND GRAVEL</a></li>
+          <li><a class="nav-link scrollto <?php if (isset($_GET['action']) && ($_GET['action'] == 'commercial_permittee' ||
+    $_GET['action'] == 'edit_commercial' ||
+    $_GET['action'] == 'set_active_commercial' ||
+    $_GET['action'] == 'import_commercial' ||
+    $_GET['action'] == 'set_inactive_commercial')
+): ?> active <?php endif;?>" href="index.php?action=commercial_permittee">COMMERCIAL SAND AND GRAVEL</a></li>
           <li><a class="nav-link scrollto" href="#industrial-sand">INDUSTRIAL SAND AND GRAVEL</a></li>
 
         </ul>

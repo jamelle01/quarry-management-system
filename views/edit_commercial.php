@@ -4,8 +4,8 @@ require_once 'menu.php';
 ?>
 
 <div class="tablediv mx-5 my-5" >
-<a href="index.php?action=quarry_permittee" class="btn btn-close mb-2 mt-5" aria-label="Close"></a>
-    <form class="row g-3" action="index.php?action=edit_quarry&id=<?= $data['Quarry_Permit_Key']; ?>" method="post">
+<a href="index.php?action=commercial_permittee" class="btn btn-close mb-3 mt-5" aria-label="Close"></a>
+    <form class="row g-3" action="index.php?action=edit_commercial&id=<?= $data['Commercial_Permit_Key']; ?>" method="post">
         <div class="col-md-4">
             <label for="Permittee_Name" class="form-label">Permittee Name</label>
             <input type="text" name="Permittee_Name" class="form-control" id="Permittee_Name" value="<?=$data['Permittee_Name'];?>" required>
