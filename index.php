@@ -5,14 +5,17 @@ require_once 'config.php';
 // include controller
 require_once 'controllers/QuarryController.php';
 require_once 'controllers/CommercialController.php';
+require_once 'controllers/IndustrialController.php';
 
 // initialize model
 $quarryModel = new QuarryModel($db);
 $commercialModel = new CommercialModel($db);
+$industrialModel = new IndustrialModel($db);
 
 // create instance
 $quarryController = new QuarryController($quarryModel);
 $commercialController = new CommercialController($commercialModel);
+$industrialController = new IndustrialController($industrialModel);
 
 // check action parameter
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
@@ -118,46 +121,47 @@ switch ($action) {
     case 'import_commercial':
         $commercialController->import();
         break;
-    // // * for commercial
-    // case 'commercial_permittee':
-    //     $commercialController->getPermittees();
-    //     break;
-    // case 'view_commercial':
-    //     $Commercial_Permit_Key = $_GET['id'];
-    //     $commercialController->view($Commercial_Permit_Key);
-    //     break;
-    // case 'edit_commercial':
-    //     if (isset($_GET['id'])) {
-    //         $Commercial_Permit_Key = $_GET['id'];
-    //         $commercialController->edit($Commercial_Permit_Key);
-    //     } else {
-    //         header('Location: index.php');
-    //     }
-    //     break;
-    // case 'set_active_commercial':
-    //     if (isset($_GET['id'])) {
-    //         $id = $_GET['id'];
-    //         $commercialController->setActive($id);
-    //     } else {
-    //         header('Location: index.php');
-    //     }
-    //     break;
-    // case 'set_inactive_commercial':
-    //     if (isset($_GET['id'])) {
-    //         $id = $_GET['id'];
-    //         $commercialController->setInactive($id);
-    //     } else {
-    //         header('Location: index.php');
-    //     }
-    //     break;
-    // case 'search_commercial':
-    //     $query_commercial = $_POST['query_commercial'];
-    //     $commercialController->search($query_commercial);
-    //     break;
-    // case 'create_commercial':
-    //     $commercialController->create();
-    //     break;
-    // case 'import_commercial':
-    //     $commercialController->import();
-    //     break;
+
+    // * for industrial
+    case 'industrial_permittee':
+        $industrialController->getPermittees();
+        break;
+    case 'view_industrial':
+        $Industrial_Permit_Key = $_GET['id'];
+        $industrialController->view($Industrial_Permit_Key);
+        break;
+    case 'edit_industrial':
+        if (isset($_GET['id'])) {
+            $Industrial_Permit_Key = $_GET['id'];
+            $industrialController->edit($Industrial_Permit_Key);
+        } else {
+            header('Location: index.php');
+        }
+        break;
+    case 'set_active_industrial':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $industrialController->setActive($id);
+        } else {
+            header('Location: index.php');
+        }
+        break;
+    case 'set_inactive_industrial':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $industrialController->setInactive($id);
+        } else {
+            header('Location: index.php');
+        }
+        break;
+    case 'search_industrial':
+        $query_industrial = $_POST['query_industrial'];
+        $industrialController->search($query_industrial);
+        break;
+    case 'create_industrial':
+        $industrialController->create();
+        break;
+    case 'import_industrial':
+        $industrialController->import();
+        break;
 }

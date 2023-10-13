@@ -37,7 +37,14 @@
     $_GET['action'] == 'search_commercial' ||
     $_GET['action'] == 'set_inactive_commercial')
 ): ?> active <?php endif;?>" href="index.php?action=commercial_permittee">COMMERCIAL SAND AND GRAVEL</a></li>
-          <li><a class="nav-link scrollto" href="#industrial-sand">INDUSTRIAL SAND AND GRAVEL</a></li>
+          <li><a class="nav-link scrollto <?php if (isset($_GET['action']) && ($_GET['action'] == 'industrial_permittee' ||
+    $_GET['action'] == 'edit_industrial' ||
+    $_GET['action'] == 'set_active_industrial' ||
+    $_GET['action'] == 'import_industrial' ||
+    $_GET['action'] == 'view_industrial' ||
+    $_GET['action'] == 'search_industrial' ||
+    $_GET['action'] == 'set_inactive_industrial')
+): ?> active <?php endif;?>" href="index.php?action=industrial_permittee">INDUSTRIAL SAND AND GRAVEL</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
