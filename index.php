@@ -92,33 +92,72 @@ switch ($action) {
             header('Location: index.php');
         }
         break;
-        // case 'set_active_quarry':
-        //     if (isset($_GET['id'])) {
-        //         $id = $_GET['id'];
-        //         $quarryController->setActive($id);
-        //     } else {
-        //         header('Location: index.php');
-        //     }
-        //     break;
-        // case 'set_inactive_quarry':
-        //     if (isset($_GET['id'])) {
-        //         $id = $_GET['id'];
-        //         $quarryController->setInactive($id);
-        //     } else {
-        //         header('Location: index.php');
-        //     }
-        //     break;
-        // case 'search_quarry':
-        //     $query_quarry = $_POST['query_quarry'];
-        //     $quarryController->search($query_quarry);
-        //     // $sandGravelController->index();
-        //     // $InduSandGravelController->index();
-        //     // require 'views/index.php';
-        //     break;
-        // case 'create_quarry':
-        //     $quarryController->create();
-        //     break;
-        // case 'import_quarry':
-        //     $quarryController->import();
-        //     break;
+    case 'set_active_commercial':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $commercialController->setActive($id);
+        } else {
+            header('Location: index.php');
+        }
+        break;
+    case 'set_inactive_commercial':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $commercialController->setInactive($id);
+        } else {
+            header('Location: index.php');
+        }
+        break;
+    case 'search_commercial':
+        $query_commercial = $_POST['query_commercial'];
+        $commercialController->search($query_commercial);
+        break;
+    case 'create_commercial':
+        $commercialController->create();
+        break;
+    case 'import_commercial':
+        $commercialController->import();
+        break;
+    // // * for commercial
+    // case 'commercial_permittee':
+    //     $commercialController->getPermittees();
+    //     break;
+    // case 'view_commercial':
+    //     $Commercial_Permit_Key = $_GET['id'];
+    //     $commercialController->view($Commercial_Permit_Key);
+    //     break;
+    // case 'edit_commercial':
+    //     if (isset($_GET['id'])) {
+    //         $Commercial_Permit_Key = $_GET['id'];
+    //         $commercialController->edit($Commercial_Permit_Key);
+    //     } else {
+    //         header('Location: index.php');
+    //     }
+    //     break;
+    // case 'set_active_commercial':
+    //     if (isset($_GET['id'])) {
+    //         $id = $_GET['id'];
+    //         $commercialController->setActive($id);
+    //     } else {
+    //         header('Location: index.php');
+    //     }
+    //     break;
+    // case 'set_inactive_commercial':
+    //     if (isset($_GET['id'])) {
+    //         $id = $_GET['id'];
+    //         $commercialController->setInactive($id);
+    //     } else {
+    //         header('Location: index.php');
+    //     }
+    //     break;
+    // case 'search_commercial':
+    //     $query_commercial = $_POST['query_commercial'];
+    //     $commercialController->search($query_commercial);
+    //     break;
+    // case 'create_commercial':
+    //     $commercialController->create();
+    //     break;
+    // case 'import_commercial':
+    //     $commercialController->import();
+    //     break;
 }

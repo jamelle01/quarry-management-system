@@ -25,6 +25,7 @@
     $_GET['action'] == 'set_active_quarry' ||
     $_GET['action'] == 'import_quarry' ||
     $_GET['action'] == 'view_quarry' ||
+    $_GET['action'] == 'search_quarry' ||
     $_GET['action'] == 'set_inactive_quarry')
 ): ?> active <?php endif;?>" href="index.php?action=quarry_permittee">QUARRY PERMITTEE</a>
           </li>
@@ -32,6 +33,8 @@
     $_GET['action'] == 'edit_commercial' ||
     $_GET['action'] == 'set_active_commercial' ||
     $_GET['action'] == 'import_commercial' ||
+    $_GET['action'] == 'view_commercial' ||
+    $_GET['action'] == 'search_commercial' ||
     $_GET['action'] == 'set_inactive_commercial')
 ): ?> active <?php endif;?>" href="index.php?action=commercial_permittee">COMMERCIAL SAND AND GRAVEL</a></li>
           <li><a class="nav-link scrollto" href="#industrial-sand">INDUSTRIAL SAND AND GRAVEL</a></li>
