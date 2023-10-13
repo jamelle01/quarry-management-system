@@ -8,25 +8,31 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-        <li><a class="nav-link scrollto
-        <?php if (isset($_GET['action']) && $_GET['action'] == 'index'): ?>
-                    active
-                <?php endif;?>
-        "            href="index.php?action=index">Home</a></li>
+          <li>
+              <a class="nav-link scrollto <?php if (!isset($_GET['action']) || $_GET['action'] === 'index'): ?>active<?php endif;?>" href="index.php?action=index">Home</a>
+          </li>
 
-        <li><a class="nav-link scrollto
+          <li><a class="nav-link scrollto
           <?php if (isset($_GET['action']) && $_GET['action'] == 'about'): ?>
                     active
                 <?php endif;?>
           " href="index.php?action=about">About</a></li>
 
-          <li><a class="nav-link scrollto
-          <?php if (isset($_GET['action']) && $_GET['action'] == 'quarry_permittee'): ?>
-                    active
-                <?php endif;?>
-          "
-          href="index.php?action=quarry_permittee">QUARRY PERMITTEE</a></li>
-          <li><a class="nav-link scrollto" href="#commercial-sand">COMMERCIAL SAND AND GRAVEL</a></li>
+          <li>
+              <a class="nav-link scrollto
+              <?php if (
+    isset($_GET['action']) &&
+    ($_GET['action'] == 'quarry_permittee' ||
+        $_GET['action'] == 'edit_quarry' ||
+        $_GET['action'] == 'set_active_quarry' ||
+        $_GET['action'] == 'import_quarry' ||
+        $_GET['action'] == 'set_inactive_quarry')
+): ?>
+              active
+              <?php endif;?>
+              " href="index.php?action=quarry_permittee">QUARRY PERMITTEE</a>
+          </li>
+          <li><a class="nav-link scrollto" href="index.php?action=quarry_permittee">COMMERCIAL SAND AND GRAVEL</a></li>
           <li><a class="nav-link scrollto" href="#industrial-sand">INDUSTRIAL SAND AND GRAVEL</a></li>
 
         </ul>
